@@ -1,0 +1,266 @@
+
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/menu/left_main/style.css*/
+div.grey-tabs-menu
+{
+	float:left;
+	width:100%;
+	background:#F4F4F4;
+	font-size:93%;
+	line-height:normal;
+}
+
+div.grey-tabs-menu ul
+{
+	margin:0;
+	padding:10px 10px 0 10px;
+	list-style:none;
+}
+
+div.grey-tabs-menu li 
+{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+div.grey-tabs-menu a
+{
+	float:left;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/left_main/images/tableft.gif') no-repeat left top;
+	margin:0;
+	padding:0 0 0 4px;
+	text-decoration:none;
+	margin-top:0.2em;
+}
+
+div.grey-tabs-menu a nobr
+{
+	float:left;
+	display:block;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/left_main/images/tabright.gif') no-repeat right top;
+	padding:5px 15px 4px 6px;
+	white-space:nowrap;
+	color:#666;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+div.grey-tabs-menu a nobr {float:none;}
+/* End IE5-Mac hack */
+
+div.grey-tabs-menu a:hover nobr
+{
+	color:#000;
+}
+
+div.grey-tabs-menu a:hover
+{
+	background-position:0% -42px;
+}
+
+div.grey-tabs-menu a:hover nobr
+{
+	background-position:100% -42px;
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}
+/* End */
+
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/menu/bottom_main/style.css*/
+/* Left menu*/
+ul.left-menu
+{
+	list-style:none;
+	margin:0; padding:0;
+	margin-bottom:8px;
+	position: relative; /*IE bug*/
+}
+
+ul.left-menu li
+{
+	padding: 10px 16px;
+	background:#F5F5F5 url('/bitrix/templates/.default/components/bitrix/menu/bottom_main/images/left_menu_bg.gif') top repeat-x;
+}
+
+ul.left-menu li a
+{
+	font-size:100%;
+	color:#BC262C;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+ul.left-menu li a:visited
+{
+	color:#BC262C;
+}
+
+ul.left-menu li a:hover
+{
+	color:#BC262C;
+}
+
+
+ul.left-menu li a.selected:link, 
+ul.left-menu li a.selected:visited, 
+ul.left-menu li a.selected:active, 
+ul.left-menu li a.selected:hover
+{
+	color:#FC8D3D;
+}
+
+
+
+/* End */
+
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/menu/left/style.css*/
+div.grey-tabs-menu
+{
+	float:left;
+	width:100%;
+	background:#F4F4F4;
+	font-size:93%;
+	line-height:normal;
+}
+
+div.grey-tabs-menu ul
+{
+	margin:0;
+	padding:10px 10px 0 10px;
+	list-style:none;
+}
+
+div.grey-tabs-menu li 
+{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+div.grey-tabs-menu a
+{
+	float:left;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/left/images/tableft.gif') no-repeat left top;
+	margin:0;
+	padding:0 0 0 4px;
+	text-decoration:none;
+	margin-top:0.2em;
+}
+
+div.grey-tabs-menu a nobr
+{
+	float:left;
+	display:block;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/left/images/tabright.gif') no-repeat right top;
+	padding:5px 15px 4px 6px;
+	white-space:nowrap;
+	color:#666;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+div.grey-tabs-menu a nobr {float:none;}
+/* End IE5-Mac hack */
+
+div.grey-tabs-menu a:hover nobr
+{
+	color:#000;
+}
+
+div.grey-tabs-menu a:hover
+{
+	background-position:0% -42px;
+}
+
+div.grey-tabs-menu a:hover nobr
+{
+	background-position:100% -42px;
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}
+/* End */
+
+
+
+/* Start:/bitrix/templates/.default/components/bitrix/menu/inside_top/style.css*/
+div.grey-tabs-menu
+{
+	float:left;
+	width:100%;
+	background:#F4F4F4;
+	font-size:93%;
+	line-height:normal;
+}
+
+div.grey-tabs-menu ul
+{
+	margin:0;
+	padding:10px 10px 0 10px;
+	list-style:none;
+}
+
+div.grey-tabs-menu li 
+{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+div.grey-tabs-menu a
+{
+	float:left;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/inside_top/images/tableft.gif') no-repeat left top;
+	margin:0;
+	padding:0 0 0 4px;
+	text-decoration:none;
+	margin-top:0.2em;
+}
+
+div.grey-tabs-menu a nobr
+{
+	float:left;
+	display:block;
+	background:url('/bitrix/templates/.default/components/bitrix/menu/inside_top/images/tabright.gif') no-repeat right top;
+	padding:5px 15px 4px 6px;
+	white-space:nowrap;
+	color:#666;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+div.grey-tabs-menu a nobr {float:none;}
+/* End IE5-Mac hack */
+
+div.grey-tabs-menu a:hover nobr
+{
+	color:#000;
+}
+
+div.grey-tabs-menu a:hover
+{
+	background-position:0% -42px;
+}
+
+div.grey-tabs-menu a:hover nobr
+{
+	background-position:100% -42px;
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}
+/* End */
+/* /bitrix/templates/.default/components/bitrix/menu/left_main/style.css */
+/* /bitrix/templates/.default/components/bitrix/menu/bottom_main/style.css */
+/* /bitrix/templates/.default/components/bitrix/menu/left/style.css */
+/* /bitrix/templates/.default/components/bitrix/menu/inside_top/style.css */
