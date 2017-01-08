@@ -60,5 +60,11 @@ class Customer extends \yii\db\ActiveRecord
         return $this->hasOne(Order::className(), ['id_order' => 'id_customer']);
     }
 
-    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdOrders()
+    {
+        return $this->hasMany(Goods::className(), ['id_goods' => 'id_order'])->viaTable('order', ['id_order' => 'id_customer']);
+    }
 }

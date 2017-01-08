@@ -13,8 +13,7 @@ use Yii;
  * @property string $phone
  * @property string $address
  *
- * @property Order $order
- * @property Goods[] $idOrders
+ * @property Order[] $orders
  */
 class Customer extends \yii\db\ActiveRecord
 {
@@ -34,7 +33,7 @@ class Customer extends \yii\db\ActiveRecord
         return [
             [['name_company', 'head', 'phone', 'address'], 'required','message'=>'Поле обязательное для заполнения'],
             [['name_company', 'head', 'address'], 'string', 'max' => 200],
-            [['phone'], 'number', 'message'=>'Введите числовое значение'],
+            [['phone'],'number', 'message'=>'Введите числовое значение'],
         ];
     }
 
@@ -44,7 +43,7 @@ class Customer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_customer' => 'Номер заказчика',
+           'id_customer' => 'Номер заказчика',
             'name_company' => 'Название компании',
             'head' => 'Руководитель',
             'phone' => 'Телефон',
@@ -55,16 +54,8 @@ class Customer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getOrder()
+    public function getOrders()
     {
-        return $this->hasOne(Order::className(), ['id_order' => 'id_customer']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdOrders()
-    {
-        return $this->hasMany(Goods::className(), ['id_goods' => 'id_order'])->viaTable('order', ['id_order' => 'id_customer']);
+        return $this->hasMany(Order::className(), ['id_customers' => 'id_customer']);
     }
 }

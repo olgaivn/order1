@@ -1,6 +1,8 @@
 ﻿<?php Use \yii\helpers\Html; ?>
-<table class="jumbotron ">
-  <tr>
+<h1 align="center"> Продукция </h1>
+
+<table class="table ">
+  <tr class="danger">
 	
 	<th></th>
 	<th class="in">Название</th>
@@ -10,7 +12,7 @@
 	<th></th>
   </tr>
   <?php foreach($goods as $goods){ ?>
-  <tr>
+  <tr class="danger1">
 	<td><?= $goods->id_goods ?></td>
 	<td><?= htmlspecialchars($goods->name_goods) ?></td>
 	<td><?= htmlspecialchars($goods->date_manufacture) ?></td>

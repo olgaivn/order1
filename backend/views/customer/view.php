@@ -5,7 +5,7 @@
   <p>Адрес:  <?=htmlspecialchars($customer->address); ?></p>
   <h3>История заказов</h3>
   <ul>
-  <?php foreach($customer->getIdOrders()->all() as $order) { ?>
+  <?php foreach($customer->getOrders()->all() as $order) { ?>
 	<ul><?php
 	echo $order->date_order;
 	?>:<?php

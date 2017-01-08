@@ -1,19 +1,21 @@
 ﻿<?php Use \yii\helpers\Html; ?>
-<table class="jumbotron ">
-  <tr>
-	<th class="in">№ заказа</th>
-	<th class="in">Дата заказа</th>
-	<th class="in">Товар</th>
-	<th class="in">Заказчик</th>
-	<th class="in">Количество</th>
+
+<h1 align="center"> Заказы активные </h1>
+<table  class="table">
+  <tr class="danger"><br>
+	<th >№ заказа</th>
+	<th >Дата заказа</th>
+	<th >Товар</th>
+	<th >Заказчик</th>
+	<th >Количество</th>
 	<th></th>
   </tr>
   <?php foreach($order as $order){ ?>
-  <tr>
+  <tr class="danger1">
 	<td><?= $order->id_order ?></td>
 	<td><?= htmlspecialchars($order->date_order) ?></td>
-	<td><?= htmlspecialchars($order->getIdOrder0()->one()->name_goods) ?></td>
-	<td><?= htmlspecialchars($order->getIdOrder()->one()->name_company) ?>  </td>
+	<td><?= htmlspecialchars($order->getIdGoodss()->one()->name_goods) ?></td>
+	<td><?= htmlspecialchars($order->getIdCustomers()->one()->name_company) ?>  </td>
 	<td><?= htmlspecialchars($order->quantity) ?></td>
 	<td>
 		<?= Html::a('<span class="glyphicon glyphicon-edit"></span> Редактировать', ['order/edit', 'id_order' =>$order->id_order], ['class'=>'btn btn-primary']) ?>

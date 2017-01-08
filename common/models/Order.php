@@ -14,8 +14,8 @@ use Yii;
  * @property string $status
  * @property integer $quantity
  *
- * @property Customer $idOrder
- * @property Goods $idOrder0
+ * @property Customer $idCustomers
+ * @property Goods $idGoodss
  */
 class Order extends \yii\db\ActiveRecord
 {
@@ -34,11 +34,11 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             [['date_order'], 'safe'],
-            [['id_goodss', 'id_customers', 'quantity'], 'required', 'message'=>'Поле обязательное для заполнения'],
+            [['id_goodss', 'id_customers', 'quantity'], 'required','message'=>'Поле обязательное для заполнения'],
             [['id_goodss', 'id_customers', 'quantity'], 'integer', 'message'=>'Должно быть числовое значение'],
             [['status'], 'string', 'max' => 200],
-            [['id_order'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['id_order' => 'id_customer']],
-            [['id_order'], 'exist', 'skipOnError' => true, 'targetClass' => Goods::className(), 'targetAttribute' => ['id_order' => 'id_goods']],
+            [['id_customers'], 'exist', 'skipOnError' => true, 'targetClass' => Customer::className(), 'targetAttribute' => ['id_customers' => 'id_customer']],
+            [['id_goodss'], 'exist', 'skipOnError' => true, 'targetClass' => Goods::className(), 'targetAttribute' => ['id_goodss' => 'id_goods']],
         ];
     }
 
@@ -52,7 +52,7 @@ class Order extends \yii\db\ActiveRecord
             'date_order' => 'Дата заказа',
             'id_goodss' => 'Номер товара',
             'id_customers' => 'Номер заказчика',
-            'status' => 'Статус',
+            'status' => 'Заказ выполнен',
             'quantity' => 'Количество',
         ];
     }
@@ -60,16 +60,16 @@ class Order extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdOrder()
+    public function getIdCustomers()
     {
-        return $this->hasOne(Customer::className(), ['id_customer' => 'id_order']);
+        return $this->hasOne(Customer::className(), ['id_customer' => 'id_customers']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdOrder0()
+    public function getIdGoodss()
     {
-        return $this->hasOne(Goods::className(), ['id_goods' => 'id_order']);
+        return $this->hasOne(Goods::className(), ['id_goods' => 'id_goodss']);
     }
 }

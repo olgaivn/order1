@@ -12,8 +12,7 @@ use Yii;
  * @property string $date_manufacture
  * @property integer $shelf_life
  *
- * @property Order $order
- * @property Customer[] $idOrders
+ * @property Order[] $orders
  */
 class Goods extends \yii\db\ActiveRecord
 {
@@ -43,27 +42,19 @@ class Goods extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
-        return [
+      return [
             'id_goods' => 'Номер товара',
-            'name_goods' => 'название компании',
-            'date_manufacture' => 'дата производства(ГГГГ-ММ-ЧЧ)',
-            'shelf_life' => 'Срок годности, лет',
+            'name_goods' => 'Название товара',
+            'date_manufacture' => 'Дата производства(ГГГГ-ММ-ЧЧ)',
+            'shelf_life' => 'Срок годности, дней',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getOrder()
+    public function getOrders()
     {
-        return $this->hasOne(Order::className(), ['id_order' => 'id_goods']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdOrders()
-    {
-        return $this->hasMany(Customer::className(), ['id_customer' => 'id_order'])->viaTable('order', ['id_order' => 'id_goods']);
+        return $this->hasMany(Order::className(), ['id_goodss' => 'id_goods']);
     }
 }

@@ -1,7 +1,9 @@
 ﻿<?php Use \yii\helpers\Html; ?>
 
-<table class="jumbotron ">
-  <tr class="danger">
+
+<h1 align="center"> Заказчики </h1>
+<table  class="table">
+  <tr class="danger"><br>
 	<th >№ </th>
 	<th >название компании</th>
 	<th>Владелец</th>
@@ -9,7 +11,7 @@
 	<th></th>
   </tr>
   <?php foreach($customer as $customer){ ?>
-  <tr>
+  <tr class="danger1">
 	<td><?= $customer->id_customer ?></td>
 	<td><?= htmlspecialchars($customer->name_company) ?></td>
 	<td><?= htmlspecialchars($customer->head) ?></td>

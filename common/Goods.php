@@ -34,7 +34,7 @@ class Goods extends \yii\db\ActiveRecord
             [['name_goods', 'date_manufacture', 'shelf_life'], 'required', 'message'=>'Поле обязательно для заполнения'],
             [['date_manufacture'], 'safe'],
             [['shelf_life'], 'integer', 'message'=>'Должно быть числовое значение'],
-            [['name_goods'], 'string', 'max' => 200 ],
+            [['name_goods'], 'string', 'max' => 200],
         ];
     }
 
@@ -45,9 +45,9 @@ class Goods extends \yii\db\ActiveRecord
     {
         return [
             'id_goods' => 'Номер товара',
-            'name_goods' => 'название компании',
-            'date_manufacture' => 'дата производства(ГГГГ-ММ-ЧЧ)',
-            'shelf_life' => 'Срок годности, лет',
+            'name_goods' => 'Название товара',
+            'date_manufacture' => 'Дата производства(ГГГГ-ММ-ЧЧ)',
+            'shelf_life' => 'Срок годности, дней',
         ];
     }
 
@@ -59,4 +59,11 @@ class Goods extends \yii\db\ActiveRecord
         return $this->hasOne(Order::className(), ['id_order' => 'id_goods']);
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdOrders()
+    {
+        return $this->hasMany(Customer::className(), ['id_customer' => 'id_order'])->viaTable('order', ['id_order' => 'id_goods']);
+    }
 }
